@@ -1,0 +1,31 @@
+﻿@model AddNewViewModel
+
+<h1>Add A New User</h1>
+
+<form asp-action="AddNew" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" style="margin-left : 60px;" /> <br /><br />
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+
+    <label asp-for="Surname"></label>
+    <input asp-for="Surname" style="margin-left : 70px;" /><br /><br />
+    <span asp-validation-for="Surname" class="text-danger"></span>
+
+    <label asp-for="Age"></label>
+    <input asp-for="Age" style="margin-left : 100px;" /><br /><br />
+    <span asp-validation-for="Age" class="text-danger"></span>
+
+    <label asp-for="BirthDate"></label>
+    <input asp-for="BirthDate" type="date" style="margin-left : 65px;" /><br /><br />
+    <span asp-validation-for="BirthDate" class="text-danger"></span>
+
+    <label asp-for="Salary"></label>
+    <input asp-for="Salary" style="margin-left : 88px;" /> <br /><br />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+
+    <button type="submit">Submit</button>
+</form>
+
+<a asp-controller="Home" asp-action="Index" style="font-size:40px">Home</a>

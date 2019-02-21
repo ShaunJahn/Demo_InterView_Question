@@ -1,0 +1,13 @@
+﻿@model SingleUserViewModel
+
+<div style="border-style:solid; width:auto; text-align:center">
+    <p>
+        Name: @Model.SingleUser.FirstName @Model.SingleUser.Surname <br />
+        Age: @Model.SingleUser.Surname <br />
+        Born:@Model.SingleUser.BirthDate.Day/@Model.SingleUser.BirthDate.Month/@Model.SingleUser.BirthDate.Year <br />
+        Salary: @Model.SingleUser.Salary <br />
+    </p>
+</div>
+
+
+<a asp-controller="Home" asp-action="Index" style="font-size:40px">Home</a>

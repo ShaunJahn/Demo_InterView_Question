@@ -1,0 +1,17 @@
+﻿@model HomeViewAllViewModel
+
+<p>Click a user to get individual information</p>
+@foreach (var SingleUser in Model.Users)
+{
+    <div style="border-style:solid; width:auto; text-align:center">
+        <p onclick="location.href='SingleUser/'+ @SingleUser.Id ;">
+            Name: @SingleUser.FirstName @SingleUser.Surname <br />
+            Age: @SingleUser.Age <br />
+            Born: @SingleUser.BirthDate.Day/@SingleUser.BirthDate.Month/@SingleUser.BirthDate.Year <br />
+            Salary: @SingleUser.Salary <br />
+        </p>
+    </div>
+    <br />
+}
+
+<button onclick="location.href = 'add/AddNew';" style="color:white; font-size:20px; background-color:black; ">Add</button>
